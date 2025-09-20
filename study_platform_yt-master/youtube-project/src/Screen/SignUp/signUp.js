@@ -23,7 +23,7 @@ const SignUp = () => {
 
         try {
             const res = await axios.post(
-                'https://api.cloudinary.com/v1_1/dyhrtcubi/image/upload', // Replace 'your_cloud_name' with your actual cloud name
+                'https://api.cloudinary.com/image/upload', // Replace 'your_cloud_name' with your actual cloud name
                 data
             );
             setUploadedImageUrl(res.data.secure_url);
