@@ -17,7 +17,7 @@ const SignUp = () => {
         const files = e.target.files;
         const data = new FormData();
         data.append('file', files[0]);
-        data.append('upload_preset', 'vidocraft'); // Replace 'your_upload_preset' with your actual upload preset
+        data.append('upload_preset', 'youtube'); // Replace 'your_upload_preset' with your actual upload preset
 
         setLoading(true);
 
