@@ -15,13 +15,13 @@ const VideoUpload = () => {
         const files = e.target.files;
         const data = new FormData();
         data.append('file', files[0]);
-        data.append('upload_preset', 'vidocraft'); // Replace 'your_upload_preset' with your actual upload preset
+        data.append('upload_preset', 'youtube'); // Replace 'your_upload_preset' with your actual upload preset
 
         setLoading(true);
 
         try {
             const res = await axios.post(
-                `https://api.cloudinary.com/v1_1/dyhrtcubi/${type==="thumbnail"?'image':'video'}/upload`, // Replace 'your_cloud_name' with your actual cloud name
+                `https://api.cloudinary.com/${type==="thumbnail"?'image':'video'}/upload`, // Replace 'your_cloud_name' with your actual cloud name
                 data
             );
             
